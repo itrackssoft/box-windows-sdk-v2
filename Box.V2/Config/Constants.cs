@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Box.V2.Models;
 
 namespace Box.V2.Config
 {
@@ -30,6 +29,7 @@ namespace Box.V2.Config
         public const string RetentionPoliciesString = @"retention_policies/";
         public const string RetentionPolicyAssignmentsString = @"retention_policy_assignments/";
         public const string FileVersionRetentionsString = @"file_version_retentions";
+        public const string EventsString = @"events/";
 
         /*** API Full Endpoint Strings ***/
         public const string AuthCodeEndpointString = BoxApiHostUriString + AuthCodeString;
@@ -43,6 +43,7 @@ namespace Box.V2.Config
         public const string SearchEndpointString = BoxApiUriString + SearchString;
         public const string UserEndpointString = BoxApiUriString + UserString;
         public const string CollaborationsEndpointString = BoxApiUriString + CollaborationsString;
+        public const string EventsEndpointString = BoxApiUriString + EventsString;
 
 
         /*** Endpoint Paths ***/
@@ -88,6 +89,11 @@ namespace Box.V2.Config
         /*** Date Format ***/
         public const string RFC3339DateFormat = "yyyy-MM-ddTHH:mm:sszzz";
 
+        public const int DefaultEventLimit = 100;
+        public const BoxEventFilter DefaultEventFilter = BoxEventFilter.All;
+        public const int MaxStreamLimit = 800;
+        public const int MinStreamLimit = 100;
+
         public static class RequestParameters
         {
             /*** Keys ***/
@@ -106,10 +112,15 @@ namespace Box.V2.Config
 
             public const string AsUser = "As-User";
 
+            public const string StreamPosition = "stream_position";
+            public const string StreamType = "stream_type";
+            public const string StreamLimit = "limit";
+
             /*** Values ***/
             public const string RefreshToken = "refresh_token";
             public const string AuthorizationCode = "authorization_code";
             public const string JWTAuthorizationCode = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+            public const string NowStreamPosition = "now";
         }
 
         public static class ErrorCodes

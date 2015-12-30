@@ -51,15 +51,20 @@
     <Compile Include="Converter\BoxItemConverter.cs" />
     <Compile Include="Exceptions\BoxAuthenticationFailedException.cs" />
     <Compile Include="Extensions\BoxExtensions.cs" />
+    <Compile Include="Managers\BoxEventsManager.cs" />
     <Compile Include="Managers\BoxGroupsManager.cs" />
     <Compile Include="Managers\BoxRetentionPoliciesManager.cs" />
     <Compile Include="Models\BoxEnterprise.cs" />
+    <Compile Include="Models\BoxEvent.cs" />
+    <Compile Include="Models\BoxEventFilter.cs" />
+    <Compile Include="Models\BoxEvents.cs" />
     <Compile Include="Models\BoxExpiringEmbedLink.cs" />
     <Compile Include="Models\BoxFileLock.cs" />
     <Compile Include="Models\BoxFilePreview.cs" />
     <Compile Include="Models\BoxFileVersionRetention.cs" />
     <Compile Include="Models\BoxRetentionPolicyAssignment.cs" />
     <Compile Include="Models\BoxRetentionPolicy.cs" />
+    <Compile Include="Models\BoxUserEventType.cs" />
     <Compile Include="Models\BoxWebLink.cs" />
     <Compile Include="Models\Permissions\BoxFilePermission.cs" />
     <Compile Include="Models\BoxFileVersion.cs" />
@@ -144,8 +149,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">

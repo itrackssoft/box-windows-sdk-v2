@@ -186,5 +186,14 @@ namespace Box.V2
         /// </summary>
         public BoxResourcePlugins ResourcePlugins { get; private set; }
 
+        /// <summary>
+        /// Gets or sets the events manager.
+        /// </summary>
+        /// <value>The events manager.</value>
+        public BoxEventsManager EventsManager
+        {
+            get; private set;
+        }
+
     }
 }
